@@ -1,0 +1,16 @@
+##  Dual-Axle PID Lane Keeping in CARLA
+
+### Strategy
+- Rear steering follows front with speed-based factor:
+  - Low speed (<8 m/s): rear opposite front (maneuverability).
+  - High speed (≥8 m/s): rear same as front (stability).
+
+### Implementation
+- PID controls front steering offset.
+- Rear steering computed as factor of front.
+- Combined steering applied in CARLA VehicleControl.
+
+### Results
+- Lane offset reduced faster than single PID.
+- Steering smoother at high speed.
+- Confirms theory: dual-axle control improves both stability and maneuverability.

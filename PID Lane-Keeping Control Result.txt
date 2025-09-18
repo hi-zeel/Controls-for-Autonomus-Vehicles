@@ -1,0 +1,5 @@
+High Kp: car responds quickly but may oscillate.
+
+High Ki: removes drift but may cause slow oscillations.
+
+High Kd: smooths control but too much causes sluggishness.
